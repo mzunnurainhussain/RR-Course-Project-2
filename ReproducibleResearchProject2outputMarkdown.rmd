@@ -1,13 +1,12 @@
 ---
-title: "Analysis of the Adverse Health and Economic Impacts of US Storms"
-author: "MZunnurainHussain"
+title: "ReproducibleResearchProject2outputMarkdown"
+author: "M Zunnurain Hussain"
 date: "21/09/2019"
 output: html_document
 ---
-
-Github repo for the Course: [Reproducible Research](https://github.com/mGalarnyk/datasciencecoursera/tree/master/5_Reproducible_Research)
+Github repo for the Course: [Reproducible Research](https://github.com/mzunnurainhussain/RR-Course-Project-2)
 </br>
-Github repo for Rest of Specialization: [Data Science Coursera](https://github.com/mGalarnyk/datasciencecoursera)
+Github repo for Rest of Specialization: [Data Science Coursera](https://github.com/mzunnurainhussain/RR-Course-Project-2)
 
 ## 1: Synopsis
 The goal of the assignment is to explore the NOAA Storm Database and explore the effects of severe weather events on both population and economy.The database covers the time period between 1950 and November 2011.
@@ -28,8 +27,7 @@ Download the raw data file and extract the data into a dataframe.Then convert to
 library("data.table")
 library("ggplot2")
 fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2"
-download.file(fileUrl, destfile = paste0("/Users/mgalarny/Desktop", '/repdata%2Fdata%2FStormData.csv.bz2'))
-stormDF <- read.csv("/Users/mgalarny/Desktop/repdata%2Fdata%2FStormData.csv.bz2")
+stormDF <- read.csv("/Users/hp/Dowload/repdata_data_StormData.csv")
 # Converting data.frame to data.table
 stormDT <- as.data.table(stormDF)
 ```
@@ -176,3 +174,27 @@ econChart = econChart + theme(axis.text.x = element_text(angle=45, hjust=1))
 econChart = econChart + ggtitle("Top 10 US Storm Events causing Economic Consequences") + theme(plot.title = element_text(hjust = 0.5))
 econChart
 ```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
